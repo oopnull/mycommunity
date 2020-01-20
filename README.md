@@ -4,7 +4,7 @@
 #知识点
 [session与cookie]
 #脚本
-...sql
+[sql]
 create table USER
 (
     ID           INT auto_increment,
@@ -16,4 +16,3 @@ create table USER
     constraint USER_PK
         primary key (ID)
 );
-...sql
