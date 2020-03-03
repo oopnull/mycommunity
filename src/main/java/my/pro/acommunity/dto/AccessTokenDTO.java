@@ -1,5 +1,6 @@
 package my.pro.acommunity.dto;
 
+
 public class AccessTokenDTO {
     private String client_id;
     private String client_secret;

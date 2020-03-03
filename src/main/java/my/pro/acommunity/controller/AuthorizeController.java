@@ -5,6 +5,7 @@ import my.pro.acommunity.dto.GithubUser;
 import my.pro.acommunity.mapper.UserMapper;
 import my.pro.acommunity.model.User;
 import my.pro.acommunity.provider.GithubProvider;
+import my.pro.acommunity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,7 @@ public class AuthorizeController {
 
     @Resource
     private UserMapper userMapper;
-    @Autowired
+    @Resource
     private GithubProvider githubProvider;
     @Value("${github.client.id}")
     private String clientId;
@@ -34,6 +35,8 @@ public class AuthorizeController {
     @Value("${github.redirect.uri}")
     private String redirectUrl;
 
+    @Resource
+    private UserService userService;
     /**
      * code:您收到的作为对步骤1的响应的代码。
      * state:您在步骤1中提供的无法猜测的随机字符串。
@@ -54,14 +57,14 @@ public class AuthorizeController {
         accessTokenDTO.setClient_secret(clientSceret);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
-        if(githubUser!=null){
+        if(githubUser!=null&&githubUser.getId()!=null){
             User user=new User();
             String token=UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setGmtCreate(System.currentTimeMillis());//当前时间
-            user.getGmtModified(user.getGmtCreate());
+            user.setAvatarUrl(githubUser.getAvatarUrl());
+            userService.createOrUpdate(user);
             userMapper.insert(user);
             response.addCookie(new Cookie("token",token));
             //登陆成功。写cookie 和session
@@ -71,5 +74,13 @@ public class AuthorizeController {
             //失败
             return "redirect:/";
         }
+    }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,HttpServletResponse response){
+       request.getSession().removeAttribute("user");
+       Cookie cookie= new Cookie("token",null);
+       cookie.setMaxAge(0);
+       response.addCookie(cookie);
+        return "redirect:/";
     }
 }
