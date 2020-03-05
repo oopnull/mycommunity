@@ -33,7 +33,7 @@ function comment2target(targetId, type, content) {
                 if (response.code == 2003) {
                     var isAccepted = confirm(response.message);
                     if (isAccepted) {
-                        window.open("https://github.com/login/oauth/authorize?client_id=2859958f9f059979ed3a&redirect_uri=" + document.location.origin + "/callback&scope=user&state=1");
+                        window.open("https://github.com/login/oauth/authorize?client_id=a9a5e518d1f4d00be068&redirect_uri=" + document.location.origin + "/callback&scope=user&state=1");
                         window.localStorage.setItem("closable", true);
                     }
                 } else {
@@ -61,14 +61,14 @@ function collapseComments(e) {
     // 获取一下二级评论的展开状态
     var collapse = e.getAttribute("data-collapse");
     if (collapse) {
-        // 折叠二级评论
+        // 折叠二级评论 collapse
         comments.removeClass("in");
         e.removeAttribute("data-collapse");
         e.classList.remove("active");
     } else {
         var subCommentContainer = $("#comment-" + id);
         if (subCommentContainer.children().length != 1) {
-            //展开二级评论
+            //展开二级评论 collapse in
             comments.addClass("in");
             // 标记二级评论展开状态
             e.setAttribute("data-collapse", "in");

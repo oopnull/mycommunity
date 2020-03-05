@@ -65,7 +65,6 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setAvatarUrl(githubUser.getAvatarUrl());
             userService.createOrUpdate(user);
-            userMapper.insert(user);
             response.addCookie(new Cookie("token",token));
             //登陆成功。写cookie 和session
             request.getSession().setAttribute("githubUser",githubUser);
