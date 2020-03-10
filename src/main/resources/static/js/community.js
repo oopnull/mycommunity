@@ -96,7 +96,6 @@ function collapseComments(e) {
                         "class": "pull-right",
                         "html": moment(comment.gmtCreate).format('YYYY-MM-DD')
                     })));
-
                     var mediaElement = $("<div/>", {
                         "class": "media"
                     }).append(mediaLeftElement).append(mediaBodyElement);

@@ -1,5 +1,6 @@
 package my.pro.acommunity.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import my.pro.acommunity.dto.AccessTokenDTO;
 import my.pro.acommunity.dto.GithubUser;
 import my.pro.acommunity.mapper.UserMapper;
@@ -22,6 +23,7 @@ import java.util.UUID;
  * 登陆认证授权
  */
 @Controller
+@Slf4j
 public class AuthorizeController {
 
     @Resource
@@ -70,6 +72,7 @@ public class AuthorizeController {
             request.getSession().setAttribute("githubUser",githubUser);
            return "redirect:/";
         }else{
+            log.error("callback get github error,{}",githubUser);
             //失败
             return "redirect:/";
         }

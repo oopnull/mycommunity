@@ -4,8 +4,8 @@ package my.pro.acommunity.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaginationDTO {
-    private List<QuestionDTO> questions;
+public class PaginationDTO<T> {
+    private List<T> data;
     //向前一页
     private boolean showPrevious;
     //首页
@@ -59,12 +59,12 @@ public class PaginationDTO {
         }
     }
 
-    public List<QuestionDTO> getQuestions() {
-        return questions;
+    public List<T> getData() {
+        return data;
     }
 
-    public void setQuestions(List<QuestionDTO> questions) {
-        this.questions = questions;
+    public void setData(List<T> data) {
+        this.data = data;
     }
 
     public boolean isShowPrevious() {

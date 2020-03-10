@@ -3,6 +3,7 @@ package my.pro.acommunity.interceptor;
 import my.pro.acommunity.mapper.UserMapper;
 import my.pro.acommunity.model.User;
 import my.pro.acommunity.model.UserExample;
+import my.pro.acommunity.service.NotificationService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,6 +16,8 @@ import java.util.List;
 
 @Service
 public class SessionInterceptor implements HandlerInterceptor {
+    @Resource
+    private NotificationService notificationService;
     @Resource
     private UserMapper userMapper;
     @Override
@@ -29,6 +32,9 @@ public class SessionInterceptor implements HandlerInterceptor {
                     List<User> users = userMapper.selectByExample(userExample);
                     if (users.size() != 0) {
                         request.getSession().setAttribute("user", users.get(0));
+                        /*获取未读数*/
+                        Long unreadCount=notificationService.unreadCount(users.get(0).getId());
+                        request.getSession().setAttribute("unreadCount",unreadCount);
                     }
                     break;
                 }
