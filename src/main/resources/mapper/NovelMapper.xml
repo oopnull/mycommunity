@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="my.pro.acommunity.mapper.NovelMapper">
+  <resultMap id="BaseResultMap" type="my.pro.acommunity.model.Novel" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="collection" property="collection" jdbcType="INTEGER" />
+    <result column="length" property="length" jdbcType="INTEGER" />
+    <result column="total_click" property="totalClick" jdbcType="INTEGER" />
+    <result column="month_click" property="monthClick" jdbcType="INTEGER" />
+    <result column="week_click" property="weekClick" jdbcType="INTEGER" />
+    <result column="total_recommend" property="totalRecommend" jdbcType="INTEGER" />
+    <result column="month_recommend" property="monthRecommend" jdbcType="INTEGER" />
+    <result column="week_recommend" property="weekRecommend" jdbcType="INTEGER" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="novel_url" property="novelUrl" jdbcType="VARCHAR" />
+    <result column="chapter_url" property="chapterUrl" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="last_update_chapter" property="lastUpdateChapter" jdbcType="VARCHAR" />
+    <result column="last_update_chapter_url" property="lastUpdateChapterUrl" jdbcType="VARCHAR" />
+    <result column="last_update_time" property="lastUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="STATUS" property="status" jdbcType="INTEGER" />
+    <result column="first_letter" property="firstLetter" jdbcType="CHAR" />
+    <result column="platform_id" property="platformId" jdbcType="INTEGER" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="firstcontenturl" property="firstcontenturl" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, author, img, collection, length, total_click, month_click, week_click, 
+    total_recommend, month_recommend, week_recommend, introduction, comment, novel_url, 
+    chapter_url, TYPE, last_update_chapter, last_update_chapter_url, last_update_time, 
+    STATUS, first_letter, platform_id, add_time,firstcontenturl
+  </sql>
+
+	<select id="findNovelInfo" resultMap="BaseResultMap">
+		select *
+		from novel
+		where id=#{id}
+	</select>
+
+	<select id="findNowRead" resultMap="BaseResultMap">
+		select firstcontenturl
+		from novel
+		where id=#{id}
+	</select>
+
+	<select id="findNovelName" resultMap="BaseResultMap"
+		parameterType="string">
+		select
+		<include refid="Base_Column_List" />
+		from novel
+		where name like #{kw} or author like #{kw}
+	</select>
+
+	<select id="findUrbanNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '现代都市'
+	</select>
+
+	<select id="findFantasyMagicNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like'玄幻魔法'
+	</select>
+
+	<select id="findComprehensionNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '武侠修真'
+	</select>
+	
+	<select id="findScienceFictionNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '科幻灵异'
+	</select>
+	<select id="findHorrorNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '同人小说'
+	</select>
+	<select id="findOnlineGameNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '游戏竞技'
+	</select>
+	<select id="findHistoricalNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '历史军事'
+	</select>
+	<select id="findOtherNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '其他类型'
+	</select>
+	
+	
+
+	<select id="findUrbanLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '现代都市'
+		limit 0,3
+	</select>
+
+	<select id="findFantasyMagicLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '玄幻魔法'
+		limit 0,3
+	</select>
+
+	<select id="findComprehensionLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '武侠修真'
+		limit 0,3
+	</select>
+	
+	
+	<select id="findScienceFictionLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '科幻灵异'
+		limit 0,3
+	</select>
+	<select id="findHorrorLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '同人小说'
+		limit 0,3
+	</select>
+	<select id="findOnlineGameLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '游戏竞技'
+		limit 0,3
+	</select>
+	<select id="findHistoricalLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '历史军事'
+		limit 0,3
+	</select>
+	<select id="findOtherLimitNovel" resultMap="BaseResultMap">
+		select *
+		from novel
+		where type like '其他类型'
+		limit 0,3
+	</select>
+
+	<select id="getAllNovels" resultMap="BaseResultMap">
+		select *
+		from novel
+	</select>
+
+</mapper>

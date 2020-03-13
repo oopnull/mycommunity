@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<title>搜索小说</title>
+</head>
+<body>
+
+<div th:insert="~{navigation::nav}"></div>
+	<div class="header">
+		<span class="nav_left"><a href="javascript:history.go(-1)">返回</a></span>
+		<h1>搜索小说</h1>
+		<span class="nav_right"> <a rel="internal"
+			th:href="/indexNovel">首页</a>
+		</span>
+	</div>
+	<div class="search">
+		<div class="searchbox mt10 clearfix">
+			<form action="/search" method="post">
+				<input type="hidden" name="sid" value="" /> <input name="kw"
+					id="kw" type="text" class="t_i" placeholder="搜书搜作者" value="" /> <input
+					type="hidden" name="search" th:text="${msg}" />
+				<div class="searchbtn">
+					<span class="t_b"></span> <span class="t_t">搜索</span> <input
+						type="submit" value="" />
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="section">
+		<div class="box tab-pane clearfix">
+			<div class="blist tab-content active">
+				<ul>
+					<div th:each="temp:${NovelName}" >
+						<li><a th:href="@{/novelInfo(id=${temp.id},baseUrl=${temp.chapterUrl})}">
+							<div class="bcover fl">
+								<img th:src="${temp.img}"  height="130"
+									 width="100" /><span th:text="${temp.name}"></span>
+							</div>
+							<div class="bintro pl10">
+								<h4 th:text="${temp.name}"></h4>
+								<p th:text="${temp.type}"></p>.
+								(<p th:text="${temp.status}"></p>) 共<p th:text="${temp.length}"></p>字<br><p th:text="${temp.introduction}">
+							</p>
+							</div>
+						</a></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer home-bg">
+		<div class="footer_nav clearfix">
+			<a href="#">首页</a> <a href="#">书架</a> <a href="#">分类</a> <a href="#">留言</a>
+			<a href="#">个人中心</a>
+		</div>
+
+		<p class="copyright mt20">
+			<b>懒人看书</b>
+		</p>
+		<a href="#toIndex" target="_self"> <span id="gotop"
+			class="icons icon-gotop"></span>
+		</a>
+
+	</div>
+	<div class="pop_cover"></div>
+	<div class="pop_tip">
+		<div class="pop_inner">
+			<div class="pop_cont"></div>
+		</div>
+	</div>
+</body>
+</html>

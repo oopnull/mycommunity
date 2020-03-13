@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/community.css">
+		<script src="/js/jquery-3.4.1.min.js"></script>
+		<script src="js/bootstrap.min.js" type="application/javascript"></script>
+		<title th:text="${ChapterDetailName.name}"></title>
+</head>
+<body>
+<div th:insert="~{navigation::nav}"></div>
+	<div class="wrap">
+		<div class="header">
+			<span class="nav_left"><a href="javascript:history.go(-1)">返回</a></span>
+			<h1 th:text="${ChapterDetailName.name}"></h1>
+			<span class="nav_right"> <a rel="internal"
+				th:href="@{/index}">首页</a>
+			</span>
+		</div><!--
+	<input type="hidden" th:text="${ChapterList.id}" >-->
+		<div class="chaplink">
+			<a th:href="@{/chapterDetail(url=${chapterDetail.prev},
+			baseUrl=${baseUrl},id=${nowReadName.id})}"  id="btn_prev">上一章</a>
+			<a th:href="@{/chapterList(url=${baseUrl },id=${nowReadName.id})}" >章节列表</a>
+			<a th:href="@{/chapterDetail(url=${chapterDetail.next },
+			baseUrl=${baseUrl},id=${nowReadName.id})}" 	id="btn_next">下一章</a>
+		</div>
+		<input th:type="hidden" th:text="${nowReadName.id}">
+		<div class="chapter" id="chapter">
+			<div class="chapter-inner">
+				<p class="chapname">
+					<span class="bname" id="chaptitle" th:text="${chapterDetail.title}"></span>
+				</p>
+				<p id="chapcont">
+					<span th:if="${isSuccess }">
+						<span th:utext="${chapterDetail.content }"></span>
+					</span>
+					<span th:if="${!isSuccess }">
+						很抱歉，读取章节内容失败了，请再试一次！
+					</span:if>
+				</span>
+			</div>
+		</div>
+	</div>
+
+<div th:insert="~{footer::foot}"></div>
+		<div class="pop_cover"></div>
+		<div class="pop_tip">
+			<div class="pop_inner">
+				<div class="pop_cont"></div>
+			</div>
+		</div>
+</body>
+</html>

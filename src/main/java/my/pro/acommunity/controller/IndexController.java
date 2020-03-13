@@ -21,7 +21,7 @@ public class IndexController {
     private UserMapper userMapper;
     @Resource
     private QuestionService questionService;
-    @GetMapping("/")
+    @GetMapping("/index")
     public String hello(Model model,
                         @RequestParam(name = "page",defaultValue = "1") Integer page,
                         @RequestParam(name="size",defaultValue = "5") Integer size,

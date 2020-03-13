@@ -1,0 +1,80 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>仙侠修真</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/css/community.css">
+	<script src="/js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:insert="~{navigation::nav}"></div>
+	<div class="header">
+		<span class="nav_left"><a href="javascript:history.go(-1)">返回</a></span>
+		<h1>仙侠修真</h1>
+	</div>
+	<div class="section">
+		<div class="box tab-pane clearfix">
+			<div class="blist tab-content active">
+				<ul>
+					<div th:each="temp:${novels}">
+						<li><a th:href="@{/novelInfo(id=${temp.id},baseUrl=${temp.chapterUrl})}">
+							<div class="bcover fl">
+								<img th:src="${temp.img}"height="130"
+									 width="100" /><span th:text="${temp.name}"></span>
+							</div>
+							<div class="bintro pl10">
+								<h4 th:text="${temp.name}"></h4>
+								<p th:text="${temp.type}"></p>.
+								(<p th:text="${temp.status}==1? '完结':'连载中'"></p>) 共<p th:text="${temp.length}"></p>字<br><p th:text="${temp.introduction}">
+							</p>
+							</div>
+						</a></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+<nav aria-label="Page navigation">
+	共<span th:text="${pageHelper.total}"></span>条/共<span th:text="${pageHelper.pages}"></span>页
+	<ul class="pagination">
+		<li>
+			<a th:href="@{/(page=1)}" aria-label="Previous">
+				<span aria-hidden="true">首页</span>
+			</a>
+		</li>
+		<li >
+			<a th:href="@{/(page=${pageHelper.prePage})}"
+			   aria-label="Previous">
+				<span aria-hidden="true">上一页</span>
+			</a>
+		</li>
+
+		<li th:each="page :${pageHelper.navigatepageNums}"  th:class="${pageHelper.pageNum == page}? 'active' : ''">
+			<a th:href="@{/(page=${page})}" th:text="${page}" > <span class="sr-only"></span></a>
+		</li>
+
+		<li >
+			<a th:href="@{/(page=${pageHelper.nextPage })}"
+			   aria-label="Previous">
+				<span aria-hidden="true">下一页</span>
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/(page=${pageHelper.pages})}"
+			   aria-label="Previous">
+				<span aria-hidden="true">末页</span>
+			</a>
+		</li>
+		跳转到<input th:id="number" type="text" size="6" >页<input type="button" th:value="跳转" onclick="changeNumber()">
+		<script>
+			function changeNumber() {
+			}
+		</script>
+	</ul>
+</nav>
+<div th:insert="~{footer::foot}"></div>

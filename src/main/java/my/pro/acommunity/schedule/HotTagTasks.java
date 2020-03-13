@@ -23,7 +23,7 @@ public class HotTagTasks {
     @Resource
     private HotTagCache hotTagCache;
 
-   @Scheduled(fixedRate = 20000)
+   @Scheduled(fixedRate = 20000*10)
     public void hotTagSchedule(){
        log.info("HotTagSchedule start {}",new Date());
        int offset=0;

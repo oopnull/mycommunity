@@ -1,7 +1,12 @@
 
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
 <body>
 <div th:fragment="nav">
     <nav class="navbar navbar-default">
@@ -21,7 +26,12 @@
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
+
                     <li th:if="${session.user!=null}">
+                        <a href="/">小说阅读</a>
+                    <li th:if="${session.user!=null}">
+                        <a href="/index">小说问答</a>
+                    </li><li th:if="${session.user!=null}">
                         <a href="/publish">发布</a>
                     </li>
                     <li><a href="/profile/replies">通知<span class="badge" th:text="${session.unreadCount}"></span></a></li>
@@ -32,7 +42,7 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/profile/questions">我的问题</a></li>
-                            <li><a href="#">个人资料</a></li>
+                            <li><a href="/">小说阅读</a></li>
                             <li><a href="/logout">退出登陆</a></li>
                         </ul>
                     </li>
@@ -43,6 +53,25 @@
             </div>
         </div>
     </nav>
+    <div class="top_class">
+        <ul class="nav nav-tabs">
+            <li role="presentation" >
+                <a th:href="@{/urbanNovel}">都市言情</a>
+            </li>
+            <li role="presentation" >
+                <a th:href="@{/comprehension}">仙侠修真</a>
+            </li>
+            <li role="presentation" >
+                <a th:href="@{fantasyMagic}">玄幻魔法</a>
+            </li>
+            <li role="presentation" >
+                <a th:href="@{/horror}">同人小说</a>
+            </li>
+            <li role="presentation"><a th:href="@{/onlineGame}">网游竞技</a></li>
+            <li role="presentation"><a th:href="@{/historical}">历史军事</a></li>
+            <li role="presentation"><a th:href="@{/other}">其他类型</a></li>
+        </ul>
+    </div>
 
 </div>
 </body>

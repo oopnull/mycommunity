@@ -1,0 +1,87 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>仙侠修真</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/css/community.css">
+	<script src="/js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:insert="~{navigation::nav}"></div>
+	<div class="header">
+		<span class="nav_left"><a href="javascript:history.go(-1)">返回</a></span>
+		<h1>作品目录</h1>
+		<span class="nav_right"> <a rel="internal"
+			th:href="@{/indexNovel}">首页</a>
+		</span>
+	</div>
+	<div class="wrap">
+		<div class="section">
+			<div class="btitle">
+			<input type="hidden"   th:text="${ChapterList.id}">
+				<a href="" class="ye"></a><span th:text="${ChapterList.name}">状态</span><span th:text="${ChapterList.status}"></span>
+			</div>
+			<div class="dir_list">
+				<ul class="blist">
+
+						<li th:each="chapter:${chapters}">
+							<span class="bname">
+								<a th:href="@{/chapterDetail(url=${chapter.url },baseUrl=${baseUrl },id=${ChapterList.id})}"><span  th:utext="${chapter.title }"></span></a>
+							</span>
+						</li>
+
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<nav aria-label="Page navigation">
+	共<span th:text="${pageHelper.total}"></span>条/共<span th:text="${pageHelper.pages}"></span>页
+		<ul class="pagination">
+		<li>
+			<a th:href="@{/(page=1)}" aria-label="Previous">
+				<span aria-hidden="true">首页</span>
+			</a>
+		</li>
+		<li >
+			<a th:href="@{/(page=${pageHelper.prePage})}"
+			   aria-label="Previous">
+				<span aria-hidden="true">上一页</span>
+			</a>
+		</li>
+
+		<li th:each="page :${pageHelper.navigatepageNums}"  th:class="${pageHelper.pageNum == page}? 'active' : ''">
+			<a th:href="@{/(page=${page})}" th:text="${page}" > <span class="sr-only"></span></a>
+		</li>
+
+		<li >
+			<a th:href="@{/(page=${pageHelper.nextPage })}"
+			   aria-label="Previous">
+				<span aria-hidden="true">下一页</span>
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/(page=${pageHelper.pages})}"
+			   aria-label="Previous">
+				<span aria-hidden="true">末页</span>
+			</a>
+		</li>
+		跳转到<input th:id="number" type="text" size="6" >页<input type="button" th:value="跳转" onclick="changeNumber()">
+		<script>
+			function changeNumber() {
+			}
+		</script>
+	</ul>
+</nav>
+<div th:insert="~{footer::foot}"></div>
+	<div class="pop_cover"></div>
+	<div class="pop_tip">
+		<div class="pop_inner">
+			<div class="pop_cont"></div>
+		</div>
+	</div>
+</body>
+</html>
