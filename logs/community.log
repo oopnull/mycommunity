@@ -4849,3 +4849,143 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2020-03-13 20:40:51.897  INFO 13220 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
 2020-03-13 20:40:51.897  INFO 13220 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:40:51 CST 2020
 2020-03-13 20:40:59.694 ERROR 13220 --- [http-nio-8887-exec-7] m.p.a.controller.AuthorizeController     : callback get github error,null
+2020-03-13 20:45:05.660  INFO 8092 --- [main] my.pro.acommunity.AcommunityApplication  : Starting AcommunityApplication on DESKTOP-5N1C6N0 with PID 8092 (D:\maven\mycode\acommunity\target\classes started by oop in D:\maven\mycode\acommunity)
+2020-03-13 20:45:05.918  INFO 8092 --- [main] my.pro.acommunity.AcommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 20:45:43.824  INFO 8092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 20:45:44.205  INFO 8092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 20:45:44.207  INFO 8092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-03-13 20:45:47.674  INFO 8092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 20:45:47.676  INFO 8092 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 34567 ms
+2020-03-13 20:46:22.072  INFO 12396 --- [main] my.pro.acommunity.AcommunityApplication  : Starting AcommunityApplication on DESKTOP-5N1C6N0 with PID 12396 (D:\maven\mycode\acommunity\target\classes started by oop in D:\maven\mycode\acommunity)
+2020-03-13 20:46:22.115  INFO 12396 --- [main] my.pro.acommunity.AcommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 20:46:23.638  INFO 12396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 20:46:23.664  INFO 12396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 20:46:23.664  INFO 12396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-03-13 20:46:23.836  INFO 12396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 20:46:23.837  INFO 12396 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1610 ms
+2020-03-13 20:46:28.230  INFO 12396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 20:46:28.824  INFO 12396 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 20:46:29.096  INFO 12396 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-03-13 20:46:29.156  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 20:46:29 CST 2020
+2020-03-13 20:46:29.217  INFO 12396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 20:46:29.220  INFO 12396 --- [main] my.pro.acommunity.AcommunityApplication  : Started AcommunityApplication in 10.117 seconds (JVM running for 24.887)
+2020-03-13 20:46:29.289  INFO 12396 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 20:46:30.238  INFO 12396 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 20:46:30.337  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 20:46:30.338  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 20:46:30.338  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 20:46:30.338  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 20:46:30.338  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 20:46:30.339  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 20:46:30.339  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 20:46:30.339  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 20:46:30.339  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 20:46:30.339  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 20:46:30.342  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 20:46:30.342  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 20:46:30.342  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 20:46:30.342  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 20:46:30.342  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 20:46:30.344  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:46:30 CST 2020
+2020-03-13 20:46:40.854  INFO 12396 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 20:46:40.855  INFO 12396 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 20:46:40.862  INFO 12396 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-03-13 20:49:49.157  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 20:49:49 CST 2020
+2020-03-13 20:49:49.171  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 20:49:49.172  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 20:49:49.172  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 20:49:49.172  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 20:49:49.172  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 20:49:49.173  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 20:49:49.173  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 20:49:49.173  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 20:49:49.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 20:49:49.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 20:49:49.177  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 20:49:49.177  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 20:49:49.177  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 20:49:49.178  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 20:49:49.178  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 20:49:49.178  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:49:49 CST 2020
+2020-03-13 20:53:09.157  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 20:53:09 CST 2020
+2020-03-13 20:53:09.162  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 20:53:09.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 20:53:09.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 20:53:09.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 20:53:09.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 20:53:09.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 20:53:09.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 20:53:09.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 20:53:09.165  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 20:53:09.165  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 20:53:09.169  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 20:53:09.169  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 20:53:09.170  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 20:53:09.170  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 20:53:09.170  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 20:53:09.170  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:53:09 CST 2020
+2020-03-13 20:56:29.157  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 20:56:29 CST 2020
+2020-03-13 20:56:29.165  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 20:56:29.165  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 20:56:29.165  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 20:56:29.166  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 20:56:29.166  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 20:56:29.166  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 20:56:29.166  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 20:56:29.166  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 20:56:29.167  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 20:56:29.167  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 20:56:29.173  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 20:56:29.173  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 20:56:29.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 20:56:29.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 20:56:29.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 20:56:29.174  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:56:29 CST 2020
+2020-03-13 20:59:49.156  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 20:59:49 CST 2020
+2020-03-13 20:59:49.162  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 20:59:49.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 20:59:49.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 20:59:49.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 20:59:49.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 20:59:49.163  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 20:59:49.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 20:59:49.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 20:59:49.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 20:59:49.164  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 20:59:49.167  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 20:59:49.168  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 20:59:49.168  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 20:59:49.168  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 20:59:49.168  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 20:59:49.168  INFO 12396 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 20:59:49 CST 2020
+2020-03-13 21:02:12.179  INFO 8560 --- [main] my.pro.acommunity.AcommunityApplication  : Starting AcommunityApplication on DESKTOP-5N1C6N0 with PID 8560 (D:\maven\mycode\acommunity\target\classes started by oop in D:\maven\mycode\acommunity)
+2020-03-13 21:02:12.221  INFO 8560 --- [main] my.pro.acommunity.AcommunityApplication  : No active profile set, falling back to default profiles: default
+2020-03-13 21:02:18.936  INFO 8560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-03-13 21:02:18.998  INFO 8560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 21:02:18.999  INFO 8560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-03-13 21:02:19.476  INFO 8560 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 21:02:19.476  INFO 8560 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6622 ms
+2020-03-13 21:02:21.356  INFO 8560 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 21:02:21.550  INFO 8560 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-13 21:02:21.942  INFO 8560 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-03-13 21:02:21.995  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule start Fri Mar 13 21:02:21 CST 2020
+2020-03-13 21:02:22.096  INFO 8560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-03-13 21:02:22.099  INFO 8560 --- [main] my.pro.acommunity.AcommunityApplication  : Started AcommunityApplication in 12.839 seconds (JVM running for 23.795)
+2020-03-13 21:02:22.132  INFO 8560 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-13 21:02:22.729  INFO 8560 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-13 21:02:22.761  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :27
+2020-03-13 21:02:22.761  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :28
+2020-03-13 21:02:22.761  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :29
+2020-03-13 21:02:22.761  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :30
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :31
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :32
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :33
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :34
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :35
+2020-03-13 21:02:22.762  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :36
+2020-03-13 21:02:22.765  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :37
+2020-03-13 21:02:22.765  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :38
+2020-03-13 21:02:22.765  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :39
+2020-03-13 21:02:22.765  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :40
+2020-03-13 21:02:22.765  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : list question :41
+2020-03-13 21:02:22.767  INFO 8560 --- [scheduling-1] my.pro.acommunity.schedule.HotTagTasks   : HotTagSchedule Fri Mar 13 21:02:22 CST 2020
